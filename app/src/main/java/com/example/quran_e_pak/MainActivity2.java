@@ -2,9 +2,19 @@ package com.example.quran_e_pak;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.ScrollView;
+import android.widget.TextView;
 
 public class MainActivity2 extends AppCompatActivity {
+    EditText search;
+    Button button;
+    LinearLayout linear;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -6363,5 +6373,44 @@ public class MainActivity2 extends AppCompatActivity {
                         "مِنَ الۡجِنَّۃِ وَ النَّاسِ ٪﴿۶﴾",
 
                 };
+
+        search = findViewById(R.id.editTextNumber);
+        button = findViewById(R.id.button);
+        linear = findViewById(R.id.linear_l);
+
+        Intent receivedIntent = getIntent();
+        int start = receivedIntent.getIntExtra("Start", 0);
+        int end = receivedIntent.getIntExtra("End", 0);
+        String surahName = receivedIntent.getStringExtra("Name");
+
+        int s = end-1;
+        search.setHint(" آیت نمبر " +start +  "  تا " + s +" ڈالو ");
+
+
+        TextView t = new TextView(MainActivity2.this);
+        StringBuilder stringBuilder = new StringBuilder();
+
+        for (int i = start - 1; i < end-1; i++) {
+            stringBuilder.append(QuranArabicText[i]);
+            stringBuilder.append("\n");
+        }
+        t.setText(stringBuilder.toString());
+        t.setTextSize(20);
+        linear.addView(t);
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String w = search.getText().toString();
+                int co = Integer.parseInt(w);
+                if (co >= start && co <= end-1) {
+                    String ne = QuranArabicText[co-1];
+                    t.setText(ne);
+                    t.setTextSize(24);
+                } else {
+                    t.setText("آیت نمبر درست ڈالو");
+                }
+            }
+        });
     }
 }

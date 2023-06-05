@@ -269,7 +269,7 @@ public class MainActivity extends AppCompatActivity {
 
                 intent.putExtra("Start", start);
                 intent.putExtra("End", end);
-
+                intent.putExtra("name",urduSurahNames[position]);
                 startActivity(intent);
 
             }
