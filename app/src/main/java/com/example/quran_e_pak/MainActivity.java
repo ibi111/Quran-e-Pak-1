@@ -2,6 +2,7 @@ package com.example.quran_e_pak;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 public class MainActivity extends AppCompatActivity {
@@ -133,6 +134,7 @@ public class MainActivity extends AppCompatActivity {
                 " النَّاس"
         };
 
+        ArrayAdapter<String> adp = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,urduSurahNames);
 
 
     }
