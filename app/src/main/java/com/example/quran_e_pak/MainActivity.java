@@ -2,6 +2,7 @@ package com.example.quran_e_pak;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.content.Intent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -257,13 +258,19 @@ public class MainActivity extends AppCompatActivity {
 
         scroll_view.setAdapter(adp);
 
+        Intent intent = new Intent(this,MainActivity2.class);
 
 
         scroll_view.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 int start = SSP[position];
-                int end =  SSP[position+1];;
+                int end =  SSP[position+1];
+
+                intent.putExtra("Start", start);
+                intent.putExtra("End", end);
+
+                startActivity(intent);
 
             }
         });
