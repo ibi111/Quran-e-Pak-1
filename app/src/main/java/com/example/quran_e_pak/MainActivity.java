@@ -258,9 +258,12 @@ public class MainActivity extends AppCompatActivity {
         scroll_view.setAdapter(adp);
 
 
+
         scroll_view.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                int start = SSP[position];
+                int end =  SSP[position+1;;
 
             }
         });
