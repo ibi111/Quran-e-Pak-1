@@ -33,6 +33,7 @@
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
+        android:background="#044671"
         android:layout_height="wrap_content"
         android:text="تلاش"
         android:textSize="20dp"
@@ -44,13 +45,12 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <ScrollView
-        android:layout_width="414dp"
-        android:layout_height="491dp"
-        android:layout_marginTop="30dp"
+        android:layout_width="387dp"
+        android:layout_height="501dp"
+        android:layout_marginTop="32dp"
         android:layout_weight="1"
         android:padding="4dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button">
 
