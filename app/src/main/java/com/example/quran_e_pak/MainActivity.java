@@ -263,7 +263,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 int start = SSP[position];
-                int end =  SSP[position+1;;
+                int end =  SSP[position+1];;
 
             }
         });

@@ -9,15 +9,17 @@
 
     <TextView
         android:id="@+id/heading"
-        android:textStyle="bold"
         android:layout_width="418dp"
         android:layout_height="72dp"
-        android:background="#FF0760"
+        android:background="#044651"
         android:gravity="center"
         android:text="قرآن پاک"
+        android:textColor="@color/white"
         android:textSize="30sp"
+        android:textStyle="bold"
 
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
