@@ -16,6 +16,8 @@ public class MainActivity2 extends AppCompatActivity {
     Button button;
     LinearLayout linear;
 
+    TextView txt;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -6381,8 +6383,11 @@ public class MainActivity2 extends AppCompatActivity {
         Intent receivedIntent = getIntent();
         int start = receivedIntent.getIntExtra("Start", 0);
         int end = receivedIntent.getIntExtra("End", 0);
-        String surahName = receivedIntent.getStringExtra("Name");
+        String Name = receivedIntent.getStringExtra("name");
 
+        txt = findViewById(R.id.heading);
+
+        txt.setText(Name);
         int s = end-1;
         search.setHint(" آیت نمبر " +start +  "  تا " + s +" ڈالو ");
 

@@ -32,8 +32,8 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="148dp"
+        android:layout_height="57dp"
         android:background="#044671"
         android:text="تلاش"
         android:textSize="20dp"
@@ -46,9 +46,11 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <ScrollView
-        android:layout_width="708dp"
+        android:layout_width="0dp"
         android:layout_height="503dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="32dp"
+        android:layout_marginEnd="10dp"
         android:layout_weight="1"
         android:padding="4dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -66,7 +68,7 @@
 
     <TextView
         android:id="@+id/heading"
-        android:layout_width="740dp"
+        android:layout_width="0dp"
         android:layout_height="81dp"
         android:background="#044651"
         android:gravity="center"
